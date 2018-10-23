@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Language xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Identifier>de-DE</Identifier> <!--According to https://msdn.microsoft.com/de-de/library/ee825488(v=cs.20).aspx-->
+	<Name>Deutsch</Name>
+	<Words>
+		<Word>
+			<Key>SelectLanguage</Key>
+			<Value>Sprache auswählen:</Value>
+		</Word>
+		<Word>
+			<Key>PdfFileFilter</Key>
+			<Value>Pdf-Dateien|*.pdf</Value>
+		</Word>
+		<Word>
+			<Key>RemovePassword</Key>
+			<Value>Passwort von PDF entfernen</Value>
+		</Word>
+		<Word>
+			<Key>ShowPassword</Key>
+			<Value>Passwort anzeigen</Value>
+		</Word>
+		<Word>
+			<Key>HidePassword</Key>
+			<Value>Passwort verstecken</Value>
+		</Word>
+		<Word>
+			<Key>TypePassword</Key>
+			<Value>Passwort hier eingeben:</Value>
+		</Word>
+		<Word>
+			<Key>OpenFileTitle</Key>
+			<Value>Bitte eine PDF-Datei zum Entschlüsseln auswählen</Value>
+		</Word>
+		<Word>
+			<Key>SaveFileTitle</Key>
+			<Value>Bitte eine PDF-Datei als Ausgabedatei auswählen</Value>
+		</Word>
+	</Words>
+</Language>
