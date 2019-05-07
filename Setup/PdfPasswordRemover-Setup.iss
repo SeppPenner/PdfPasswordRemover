@@ -2,11 +2,11 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "PdfPasswordRemover"
-#define MyAppVersion "1.0.0.0"
+#define MyAppVersion "1.0.0.1"
 #define MyAppPublisher "Hämmer Electronics"
 #define MyAppURL "softwareload24.de.tl"
 #define MyAppExeName "PdfPasswordRemover.exe"
-#define MyPath "I:\Todo\Unfertig\PdfPasswordRemover"
+#define MyPath "C:\Users\tim\Desktop\Updaten_Snyk\PdfPasswordRemover"
 #define MyCopyRight "Copyright (©) Hämmer Electronics"
 
 [Setup]
@@ -43,10 +43,10 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked; OnlyBelowVersion: 0,6.1
 
 [Files]
-Source: "I:\Todo\Unfertig\PdfPasswordRemover\PdfPasswordRemover\bin\Debug\PdfPasswordRemover.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "I:\Todo\Unfertig\PdfPasswordRemover\PdfPasswordRemover\bin\Debug\itextsharp.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "I:\Todo\Unfertig\PdfPasswordRemover\PdfPasswordRemover\bin\Debug\itextsharp.xml"; DestDir: "{app}"; Flags: ignoreversion
-Source: "I:\Todo\Unfertig\PdfPasswordRemover\PdfPasswordRemover\bin\Debug\Languages.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#MyPath}\PdfPasswordRemover\bin\Debug\PdfPasswordRemover.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#MyPath}\PdfPasswordRemover\bin\Debug\itextsharp.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#MyPath}\PdfPasswordRemover\bin\Debug\itextsharp.xml"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#MyPath}\PdfPasswordRemover\bin\Debug\Languages.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#MyPath}\PdfPasswordRemover\bin\Debug\languages\*"; DestDir: "{app}\languages\"; Flags: ignoreversion recursesubdirs createallsubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
