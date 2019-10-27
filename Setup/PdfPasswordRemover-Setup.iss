@@ -2,11 +2,11 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "PdfPasswordRemover"
-#define MyAppVersion "1.0.0.1"
+#define MyAppVersion "1.0.1.0"
 #define MyAppPublisher "Hämmer Electronics"
 #define MyAppURL "softwareload24.de.tl"
 #define MyAppExeName "PdfPasswordRemover.exe"
-#define MyPath "C:\Users\tim\Desktop\Updaten_Snyk\PdfPasswordRemover"
+#define MyPath "C:\Users\Tim\Documents\Git\C# und VB\PdfPasswordRemover"
 #define MyCopyRight "Copyright (©) Hämmer Electronics"
 
 [Setup]
@@ -24,7 +24,7 @@ AppPublisher={#MyAppPublisher}
 AppPublisherURL={#MyAppURL}
 AppSupportURL={#MyAppURL}
 AppUpdatesURL={#MyAppURL}
-DefaultDirName={pf}\{#MyAppName}
+DefaultDirName={commonpf}\{#MyAppName}
 DisableProgramGroupPage=yes
 LicenseFile={#MyPath}\License.txt
 OutputDir={#MyPath}\Setup
@@ -43,11 +43,11 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked; OnlyBelowVersion: 0,6.1
 
 [Files]
-Source: "{#MyPath}\PdfPasswordRemover\bin\Debug\PdfPasswordRemover.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "{#MyPath}\PdfPasswordRemover\bin\Debug\itextsharp.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "{#MyPath}\PdfPasswordRemover\bin\Debug\itextsharp.xml"; DestDir: "{app}"; Flags: ignoreversion
-Source: "{#MyPath}\PdfPasswordRemover\bin\Debug\Languages.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "{#MyPath}\PdfPasswordRemover\bin\Debug\languages\*"; DestDir: "{app}\languages\"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "{#MyPath}\PdfPasswordRemover\bin\Release\PdfPasswordRemover.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#MyPath}\PdfPasswordRemover\bin\Release\itextsharp.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#MyPath}\PdfPasswordRemover\bin\Release\itextsharp.xml"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#MyPath}\PdfPasswordRemover\bin\Release\Languages.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#MyPath}\PdfPasswordRemover\bin\Release\languages\*"; DestDir: "{app}\languages\"; Flags: ignoreversion recursesubdirs createallsubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
