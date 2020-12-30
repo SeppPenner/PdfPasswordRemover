@@ -1,7 +1,7 @@
 PdfPasswordRemover
 ====================================
 
-PdfPasswordRemover is a project to remove passwords from PDF files. The project was written and tested in .Net 4.8.
+PdfPasswordRemover is a project to remove passwords from PDF files. The project was written and tested in .Net 5.0.
 
 [![Build status](https://ci.appveyor.com/api/projects/status/fg7oe6kh4vyqltbo?svg=true)](https://ci.appveyor.com/project/SeppPenner/pdfpasswordremover)
 [![GitHub issues](https://img.shields.io/github/issues/SeppPenner/PdfPasswordRemover.svg)](https://github.com/SeppPenner/PdfPasswordRemover/issues)
@@ -25,6 +25,4 @@ PdfPasswordRemover is a project to remove passwords from PDF files. The project 
 Change history
 --------------
 
-* **Version 1.0.1.0 (2019-10-27)** : Updated nuget packages, added GitVersionTask.
-* **Version 1.0.0.1 (2019-05-07)** : Updated .Net version to 4.8.
-* **Version 1.0.0.0 (2018-10-22)** : 1.0 release.
+See the [Changelog](https://github.com/SeppPenner/PdfPasswordRemover/blob/master/Changelog.md).

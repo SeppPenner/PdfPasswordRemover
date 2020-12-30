@@ -84,7 +84,7 @@
             this.comboBoxSelectLanguage.Name = "comboBoxSelectLanguage";
             this.comboBoxSelectLanguage.Size = new System.Drawing.Size(296, 21);
             this.comboBoxSelectLanguage.TabIndex = 3;
-            this.comboBoxSelectLanguage.SelectedIndexChanged += new System.EventHandler(this.ComboBoxSelectLanguage_SelectedIndexChanged);
+            this.comboBoxSelectLanguage.SelectedIndexChanged += new System.EventHandler(this.ComboBoxSelectLanguageSelectedIndexChanged);
             // 
             // buttonShowPassword
             // 
@@ -94,7 +94,7 @@
             this.buttonShowPassword.Size = new System.Drawing.Size(200, 24);
             this.buttonShowPassword.TabIndex = 4;
             this.buttonShowPassword.UseVisualStyleBackColor = true;
-            this.buttonShowPassword.Click += new System.EventHandler(this.ButtonShowPassword_Click);
+            this.buttonShowPassword.Click += new System.EventHandler(this.ButtonShowPasswordClick);
             // 
             // tableLayoutPanelMain
             // 
