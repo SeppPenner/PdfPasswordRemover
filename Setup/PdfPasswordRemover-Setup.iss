@@ -49,6 +49,7 @@ Source: "..\src\PdfPasswordRemover\bin\Release\net5.0-windows\Bruteforcing.dll";
 Source: "..\src\PdfPasswordRemover\bin\Release\net5.0-windows\BouncyCastle.Crypto.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "..\src\PdfPasswordRemover\bin\Release\net5.0-windows\Languages.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "..\src\PdfPasswordRemover\bin\Release\net5.0-windows\languages\*"; DestDir: "{app}\languages\"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "..\src\PdfPasswordRemover\bin\Release\net5.0-windows\License.txt"; DestDir: "{app}"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
