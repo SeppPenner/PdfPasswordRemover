@@ -14,7 +14,7 @@ PdfPasswordRemover is a project to remove passwords from PDF files. The project 
 ![Screenshot from the GUI German](https://github.com/SeppPenner/PdfPasswordRemover/blob/master/Screenshot_DE.PNG "Screenshot from the GUI German")
 ![Screenshot from the GUI English](https://github.com/SeppPenner/PdfPasswordRemover/blob/master/Screenshot_EN.PNG "Screenshot from the GUI English")
 
-# For more information see:
+# For more information see
 * https://www.codeproject.com/Articles/31493/PDF-Security-Remover
 * http://www.pdfsharp.net/wiki/UnprotectDocument-sample.ashx?AspxAutoDetectCookieSupport=1
 * http://pdfsharp.com/PDFsharp/index.php?option=com_content&task=view&id=39&Itemid=50

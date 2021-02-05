@@ -42,14 +42,7 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked; OnlyBelowVersion: 0,6.1
 
 [Files]
-Source: "..\src\PdfPasswordRemover\bin\Release\net5.0-windows\PdfPasswordRemover.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "..\src\PdfPasswordRemover\bin\Release\net5.0-windows\PdfPasswordRemover.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "..\src\PdfPasswordRemover\bin\Release\net5.0-windows\itextsharp.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "..\src\PdfPasswordRemover\bin\Release\net5.0-windows\Bruteforcing.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "..\src\PdfPasswordRemover\bin\Release\net5.0-windows\BouncyCastle.Crypto.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "..\src\PdfPasswordRemover\bin\Release\net5.0-windows\Languages.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "..\src\PdfPasswordRemover\bin\Release\net5.0-windows\languages\*"; DestDir: "{app}\languages\"; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "..\src\PdfPasswordRemover\bin\Release\net5.0-windows\License.txt"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\src\PdfPasswordRemover\bin\publish\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
