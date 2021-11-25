@@ -1,7 +1,7 @@
 PdfPasswordRemover
 ====================================
 
-PdfPasswordRemover is a project to remove passwords from PDF files. The project was written and tested in .Net 5.0.
+PdfPasswordRemover is a project to remove passwords from PDF files.
 
 [![Build status](https://ci.appveyor.com/api/projects/status/fg7oe6kh4vyqltbo?svg=true)](https://ci.appveyor.com/project/SeppPenner/pdfpasswordremover)
 [![GitHub issues](https://img.shields.io/github/issues/SeppPenner/PdfPasswordRemover.svg)](https://github.com/SeppPenner/PdfPasswordRemover/issues)
