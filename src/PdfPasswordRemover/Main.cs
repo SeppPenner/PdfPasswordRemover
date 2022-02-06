@@ -44,7 +44,7 @@ namespace PdfPasswordRemover
         /// <summary>
         /// The language.
         /// </summary>
-        private ILanguage language;
+        private ILanguage? language;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Main"/> class.
@@ -202,6 +202,19 @@ namespace PdfPasswordRemover
         /// <returns>A new <see cref="OpenFileDialog"/>.</returns>
         private OpenFileDialog GetNewOpenFileDialog()
         {
+            if (this.language is null)
+            {
+                return new OpenFileDialog
+                {
+                    CheckFileExists = true,
+                    CheckPathExists = true,
+                    DefaultExt = "*.pdf",
+                    Filter = string.Empty,
+                    Multiselect = false,
+                    Title = string.Empty
+                };
+            }
+
             return new OpenFileDialog
             {
                 CheckFileExists = true,
@@ -219,6 +232,17 @@ namespace PdfPasswordRemover
         /// <returns>A new <see cref="SaveFileDialog"/></returns>.
         private SaveFileDialog GetNewSaveFileDialog()
         {
+            if (this.language is null)
+            {
+                return new SaveFileDialog
+                {
+                    CheckPathExists = true,
+                    DefaultExt = "*.pdf",
+                    Filter = string.Empty,
+                    Title = string.Empty
+                };
+            }
+
             return new SaveFileDialog
             {
                 CheckPathExists = true,
@@ -235,6 +259,11 @@ namespace PdfPasswordRemover
         /// <param name="e">The event args.</param>
         private void ButtonShowPasswordClick(object sender, EventArgs e)
         {
+            if (this.language is null)
+            {
+                return;
+            }
+
             switch (this.textBoxPassword.PasswordChar)
             {
                 case '*':
@@ -253,18 +282,17 @@ namespace PdfPasswordRemover
         /// </summary>
         private void SetShowHidePasswordButtonText()
         {
-            switch (this.textBoxPassword.PasswordChar)
+            if (this.language is null)
             {
-                case '*':
-                    this.buttonShowPassword.Text = this.language.GetWord("ShowPassword");
-                    break;
-                case '\0':
-                    this.buttonShowPassword.Text = this.language.GetWord("HidePassword");
-                    break;
-                default:
-                    this.buttonShowPassword.Text = this.language.GetWord("ShowPassword");
-                    break;
+                return;
             }
+
+            this.buttonShowPassword.Text = this.textBoxPassword.PasswordChar switch
+            {
+                '*' => this.language.GetWord("ShowPassword"),
+                '\0' => this.language.GetWord("HidePassword"),
+                _ => this.language.GetWord("ShowPassword"),
+            };
         }
     }
 }
