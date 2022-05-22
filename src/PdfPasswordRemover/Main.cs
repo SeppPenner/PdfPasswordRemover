@@ -62,7 +62,7 @@ public partial class Main : Form
     private void InitializeLanguageManager()
     {
         this.languageManager.SetCurrentLanguage("de-DE");
-        this.languageManager.OnLanguageChanged += this.OnLanguageChanged;
+        this.languageManager.OnLanguageChanged += this.OnLanguageChanged!;
     }
 
     /// <summary>
@@ -184,7 +184,14 @@ public partial class Main : Form
     /// <param name="e">The event args.</param>
     private void ComboBoxSelectLanguageSelectedIndexChanged(object sender, EventArgs e)
     {
-        this.languageManager.SetCurrentLanguageFromName(this.comboBoxSelectLanguage.SelectedItem.ToString());
+        var selectedItem = this.comboBoxSelectLanguage.SelectedItem?.ToString();
+
+        if (string.IsNullOrWhiteSpace(selectedItem))
+        {
+            return;
+        }
+
+        this.languageManager.SetCurrentLanguageFromName(selectedItem);
     }
 
     /// <summary>
