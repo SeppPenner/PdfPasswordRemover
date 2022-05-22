@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "PdfPasswordRemover"
-#define MyAppVersion "1.0.3.0"
+#define MyAppVersion "1.0.5.0"
 #define MyAppPublisher "Hämmer Electronics"
 #define MyAppURL "softwareload24.de.tl"
 #define MyAppExeName "PdfPasswordRemover.exe"
