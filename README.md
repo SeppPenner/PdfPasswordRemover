@@ -9,6 +9,9 @@ PdfPasswordRemover is a project to remove passwords from PDF files.
 [![GitHub stars](https://img.shields.io/github/stars/SeppPenner/PdfPasswordRemover.svg)](https://github.com/SeppPenner/PdfPasswordRemover/stargazers)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://raw.githubusercontent.com/SeppPenner/PdfPasswordRemover/master/License.txt)
 [![Known Vulnerabilities](https://snyk.io/test/github/SeppPenner/PdfPasswordRemover/badge.svg)](https://snyk.io/test/github/SeppPenner/PdfPasswordRemover)
+[![Blogger](https://img.shields.io/badge/Follow_me_on-blogger-orange)](https://franzhuber23.blogspot.de/)
+[![Patreon](https://img.shields.io/badge/Patreon-F96854?logo=patreon&logoColor=white)](https://patreon.com/SeppPennerOpenSourceDevelopment)
+[![PayPal](https://img.shields.io/badge/PayPal-00457C?logo=paypal&logoColor=white)](https://paypal.me/th070795)
 
 # Screenshots from the GUI
 ![Screenshot from the GUI German](https://github.com/SeppPenner/PdfPasswordRemover/blob/master/Screenshot_DE.PNG "Screenshot from the GUI German")
