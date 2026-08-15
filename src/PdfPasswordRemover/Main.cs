@@ -173,7 +173,9 @@ public partial class Main : Form
         }
         catch (Exception ex)
         {
-            MessageBox.Show(ex.StackTrace, ex.Message, MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
+            var title = this.languageManager.GetCurrentLanguage().GetWord("ErrorTitle");
+            var text = $"{ex.Message}{Environment.NewLine}{Environment.NewLine}{ex.StackTrace}";
+            MessageBox.Show(text, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 

@@ -35,5 +35,9 @@
 			<Key>SaveFileTitle</Key>
 			<Value>Bitte eine PDF-Datei als Ausgabedatei auswählen</Value>
 		</Word>
+		<Word>
+			<Key>ErrorTitle</Key>
+			<Value>Fehler</Value>
+		</Word>
 	</Words>
 </Language>
