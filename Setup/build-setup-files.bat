@@ -17,7 +17,7 @@ FOR /d /r . %%d in (bin,obj) DO (
 @ECHO on
 @ECHO.Building solution...
 @cd PdfPasswordRemover
-@dotnet publish -c Release -o bin/publish
+@dotnet publish -c Release -r win-x64 --self-contained true -o bin/publish
 @ECHO.Deleting *.pdb files...
 @cd bin/publish
 @del *.pdb
