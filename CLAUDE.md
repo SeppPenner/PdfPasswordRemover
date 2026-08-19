@@ -130,8 +130,9 @@ Do not silently "clean up" these, they are existing behaviour:
 - **The `.iss` is UTF-8 with a BOM.** Inno Setup 6 only reads a script as UTF-8 when a BOM is
   present, otherwise it falls back to the system code page. The script contains `Hämmer Electronics`
   and a copyright sign, so the BOM has to stay, do not save it as "UTF-8 without BOM". Keep CRLF.
-- **The installer exe is tracked although `.gitignore` excludes `*.exe`.** `Setup/PdfPasswordRemover-Setup.exe`
-  is committed with `git add -f`. Every release rebuilds it and commits the new binary.
+- **The installer exe is not tracked, it hangs on the release.** `Setup/PdfPasswordRemover-Setup.exe`
+  was committed with `git add -f` against the `*.exe` rule up to and including 1.0.9, one new binary
+  per release. Do not add it back.
 - **`Icon.ico` and `License.txt` exist twice.** There is a copy under `src/` (used by the `.iss` as
   `SetupIconFile`) and a copy under `src/PdfPasswordRemover/` (the application icon and the license
   shipped next to the executable). Keep both in sync when either changes.
@@ -156,12 +157,30 @@ that GitVersion burns the plain release version into the shipped exe instead of 
    The existing tags are lightweight tags, create new ones the same way.
 5. Run `Setup/build-setup-files.bat` while `HEAD` is the tagged commit, then compile the installer
    with `ISCC.exe`. The exe now carries the plain version.
-6. `git add -f Setup/PdfPasswordRemover-Setup.exe` and commit it, for example `Updated setup.`.
-7. Push the commits and the tag.
+6. Push the commits and the tag.
+7. Attach `Setup/PdfPasswordRemover-Setup.exe` to the GitHub release of that tag. **Never commit the
+   installer.** `Setup/` is the `OutputDir` of the Inno Setup script, so the file lands there during
+   the build and `.gitignore` covers it afterwards.
 
 The version in the `Changelog.md` has four parts (`1.0.9.0`), the tag has three (`1.0.9`).
 GitVersion turns the tag into the assembly version, so an untagged commit produces something like
 `1.0.9-1+Branch.master.Sha...`.
+
+For step 7 there is no `gh` on this machine. The GitHub API does the job, with the token that
+`git push` already uses, so nothing has to be stored anywhere:
+
+```bash
+c=$(printf "protocol=https\nhost=github.com\n\n" | git credential fill)
+tok=$(printf "%s" "$c" | grep '^password=' | cut -d= -f2-)
+id=$(curl -s -X POST -H "Authorization: Bearer $tok" \
+  https://api.github.com/repos/SeppPenner/PdfPasswordRemover/releases \
+  -d '{"tag_name":"1.0.10","name":"1.0.10"}' | grep -m1 '"id"' | tr -dc 0-9)
+curl -s -X POST -H "Authorization: Bearer $tok" -H "Content-Type: application/octet-stream" \
+  --data-binary @Setup/PdfPasswordRemover-Setup.exe \
+  "https://uploads.github.com/repos/SeppPenner/PdfPasswordRemover/releases/$id/assets?name=PdfPasswordRemover-Setup.exe"
+```
+
+Never print that token, and never write it into a file.
 
 ## Git
 
